@@ -1,4 +1,5 @@
-#step1
+#step1 xmr
+
 DATE=$( date "+%Y%m%d%H%M")
 NAME="${JOB_NAME}_${MODE}_${DATE}_${BUILD_NUMBER}"
 PROJ="xmr-debian"
@@ -7,7 +8,7 @@ tar -rvf ${NAME}.tar ${WORKSPACE}/solution/
 cp ${NAME}.tar ${WORKSPACE}/${PROJ}/usr/src/${PROJ}/xm.tar
 echo "Build № ${NAME} is Good!"
 
-#step2
+#step2 xmr
 DATE=$(date "+%Y-%m-%d")
 NAME="${JOB_NAME}_${MODE}_${DATE}_${BUILD_NUMBER}"
 rm -f *.deb
@@ -45,3 +46,5 @@ if [ -f "${WORKSPACE}/xmr-debian.deb" ]; then
 else
   echo "File deb: ${debfile} not exist"
 fi
+
+#rsync -a --exclude=${EXCLUDE} ${ROOTPATH}/{$$same}/ ${TUDA}/${PRJNAME}

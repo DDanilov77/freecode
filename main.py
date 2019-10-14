@@ -1,4 +1,3 @@
-#main page - first program
 #random.randint - Return a random integer N such that a <= N <= b
 
 import sys, random

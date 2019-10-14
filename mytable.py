@@ -29,3 +29,4 @@ f.close()
 # Разрываем подключение.
 conn.close()
 
+#next query
