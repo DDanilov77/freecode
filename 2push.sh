@@ -1,4 +1,5 @@
 #!/bin/bash
+
 cd ~/freecode/
 DATE=$( date "+%Y-%m-%d %H:%M")
 file=".git/new-push.txt"
@@ -22,11 +23,11 @@ if [ -z "$1" ]; then  #if not yet cmd parameters
           var3=$((var3+1))
     fi
     done <"$file"
-    #echo "m{${var1}}d{${var2}}n{${var3}} ";
+    echo "m{${var1}}d{${var2}}n{${var3}} ";
     git commit -m"m{${var1}}d{${var2}}n{${var3}} from $HOSTNAME at ${DATE}"
 else
-    #echo "$1";
+    echo "$1";
     git commit -m"$1";
 fi
 git push origin master
-#echo "Push m{${var1}}d{${var2}}n{${var3}} from $HOSTNAME at ${DATE}"
+echo "Push m{${var1}}d{${var2}}n{${var3}} from $HOSTNAME at ${DATE}"
